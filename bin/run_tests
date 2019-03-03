@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -e
+shopt -s expand_aliases
+
+DIR="$( dirname $( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd ))"
+
+cd "$DIR"
+
+COVERAGE_PROCESS_START=./.coveragerc coverage run setup.py test
+coverage html
+coverage report --show-missing --skip-covered
+flake8 edmontonpy
+
+DJANGO_SETTINGS_MODULE=edmontonpy.settings.integration_test manage.py test
+
+npm run test

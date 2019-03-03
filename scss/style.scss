@@ -1,0 +1,11 @@
+@import "colors";
+@import "variables";
+@import "fonts";
+
+// Bootstrap and its default variables
+@import "node_modules/bootstrap/scss/bootstrap";
+
+// Custom components
+@import "map";
+@import "sponsor";
+@import "triangle";

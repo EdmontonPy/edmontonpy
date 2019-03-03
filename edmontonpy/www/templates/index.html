@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="position-relative overflow-hidden p-3 p-md-5 text-center">
+  <div class="container">
+    <div class="row p-3 justify-content-center align-items-center">
+      <h1 class="text-dark">Edmonton Python Meetup</h1>
+    </div>
+    <div class="row p-3 justify-content-center align-items-center">
+      <div class="col-md-6">
+        <h6 class="text-muted">Inspired by the Python community, we hope to foster a strong, supportive, and proficient Python community in the Edmonton area.</h6>
+      </div>
+    </div>
+    <div class="row p-3 justify-content-center align-items-center">
+      <div class="col-6 col-md-2">
+        <img src="{% static 'imgs/logo.svg' %}" class="img-fluid" alt="EdmontonPy Logo">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="p-1 p-md-3 bg-secondary triangle-bottom-secondary">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col">
+        <h1 class="text-white">Next Meetup: {% if object %}{{ object.date_time }}{% else %}To Be Announced{% endif %}</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="overflow-hidden text-center bg-secondary-400">
+  <div class="container p-3">
+    <div class="row">
+      {% for presentation in object.presentations.all %}
+        <div class="col-12 col-lg">
+          <h4 class="text-dark">{{ presentation.name }}</h4>
+          <span class="text-white font-italic">{{ presentation.presenter.full_name }}</span>
+          <div>
+            {% if presentation.presenter.twitter_username %}
+              <a class="text-white" href="https://twitter.com/{{ presentation.presenter.twitter_username }}"><span class="fa-stack font-md"><i class="fas fa-circle fa-stack-2x"></i><i class="fab fa-twitter fa-stack-1x text-secondary"></i></span></a>
+            {% endif %}
+            {% if presentation.presenter.slack_members_id %}
+              <a class="text-white" href="https://edmontonpy.slack.com/team/{{ presentation.presenter.slack_members_id }}"><span class="fa-stack font-md"><i class="fas fa-circle fa-stack-2x"></i><i class="fab fa-slack-hash fa-stack-1x text-secondary"></i></span></a>
+            {% endif %}
+            {% if presentation.presenter.linkedin_url %}
+              <a class="text-white" href="{{ presentation.presenter.linkedin_url }}"><span class="fa-stack font-md"><i class="fas fa-circle fa-stack-2x"></i><i class="fab fa-linkedin-in fa-stack-1x text-secondary"></i></span></a>
+            {% endif %}
+            {% if presentation.presenter.github_username %}
+              <a class="text-white" href="https://github.com/{{ presentation.presenter.github_username }}/"><span class="fa-stack font-md"><i class="fab fa-github fa-stack-2x"></i></span></a>
+            {% endif %}
+          </div>
+        </div>
+      {% empty %}
+        <div class="col p-3">
+          <h1 class="text-dark">Presentations Coming Soon</h1>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="row text-center">
+      <div class="col">
+        {% if object %}
+          <span class="text-white">
+            Sponsored by: {{ object.sponsor.name }}
+          </span>
+        {% endif %}
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="container">
+  <div class="row d-flex justify-content-center p-4">
+
+    <div class="col-12 shadow">
+      <div class="row p-3">
+        <div class="col-12 col-md-4 text-center text-light">
+          <h4 class="text-dark">Where we meet:</h4>
+          <address>
+            <strong><a href="https://www.startupedmonton.com/">Startup Edmonton</a></strong>
+            <a href="https://goo.gl/maps/4GMxptb4zb32">
+              <br>
+              10359 104 Sy N.W. #301,
+              <br>
+              Edmonton, AB T5J 1B9
+            </a>
+          </address>
+        </div>
+
+        <div class="col-12 col-md-8">
+          <div class="map embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2370.6658141068915!2d-113.50124168415402!3d53.54588098002133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53a022493dc36ccb%3A0x39a254126e46b1f1!2sStartup+Edmonton!5e0!3m2!1sen!2sca!4v1546050827861" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="sponsorsCarousel" class="carousel carousel-fade" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active my-4">
+      <div class="row p-3 justify-content-center align-items-center">
+        <h4 class="text-muted">Sponsors</h4>
+      </div>
+      <div class="row d-flex justify-content-around mx-2">
+        <div class="col col-md-2 my-auto">
+          <a href="https://www.startupedmonton.com/"><img class="d-block mx-auto sponsor-logo" src="{% static 'imgs/sponsors/startup-edmonton.png' %}" alt="NAIT Logo"></a>
+        </div>
+        <div class="col col-md-2 my-auto">
+          <a href="https://www.theorganicbox.ca/"><img class="d-block mx-auto sponsor-logo" src="{% static 'imgs/sponsors/the-organic-box.jpg' %}" alt="The Organic Box Logo"></a>
+        </div>
+        <div class="col col-md-2 my-auto">
+          <a href="https://liftinteractive.com/"><img class="d-block mx-auto sponsor-logo" src="{% static 'imgs/sponsors/lift-interactive.png' %}" alt="Lift Interactive Logo"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

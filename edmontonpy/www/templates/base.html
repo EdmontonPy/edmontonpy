@@ -1,0 +1,143 @@
+{% load static %}
+
+<!doctype html>
+<html class="h-100" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Building the Edmonton Python Community">
+    <meta name="author" content="EdmontonPy">
+
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+
+    <title>{% block full_title %}EdmontonPy | {% block title %}{% endblock %}{% endblock %}</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Maven+Pro:500">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.min.css' %}">
+
+    {% block extra_head %}
+    {% endblock %}
+  </head>
+  <body class="d-flex flex-column h-100">
+    {% block body %}
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark bg-primary shadow">
+        <div class="container justify-content-between">
+          <a class="navbar-brand" href="{% url 'home' %}">
+            EdmontonPy
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="{% url 'home' %}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="{% url 'home' %}">Meetups</a>
+              </li>
+              <li class="nav-item d-none d-md-inline">
+                <a class="nav-link text-white-50" href="https://twitter.com/edmontonpy">
+                  <span class="fa-stack font-md">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x text-primary"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="nav-item d-none d-md-inline">
+                <a class="nav-link text-white-50" href="https://edmontonpy.slack.com/">
+                  <span class="fa-stack font-md">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-slack-hash fa-stack-1x text-primary"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="nav-item d-none d-md-inline">
+                <a class="nav-link text-white-50" href="https://github.com/EdmontonPy/edmontonpy">
+                  <span class="fa-stack font-md">
+                    <i class="fab fa-github fa-stack-2x"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="flex-shrink-0" role="main">
+      {% block content %}
+      {% endblock %}
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-primary text-light footer mt-auto">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-6 col-md-3">
+            <div class="pb-3 col-6 col-lg-4">
+              <a href="{% url 'home' %}">
+                <img src="{% static 'imgs/logo-white.svg' %}" class="img-fluid" alt="EdmontonPy Logo">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 col-md">
+            <h5 class="text-white"><u><a class="text-white" href="{% url 'home' %}">EdmontonPy</a></u></h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text-white" href="https://www.startupedmonton.com/">Startup Edmonton</a></li>
+              <li><a class="text-white" href="https://goo.gl/maps/4GMxptb4zb32">301, 10359 - 104 Street</a></li>
+              <li><a class="text-white" href="https://goo.gl/maps/4GMxptb4zb32">Edmonton, AB T5J 1B9</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5 class="text-white"><u>Links</u></h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text-white" href="{% url 'home' %}">Home</a></li>
+              <li><a class="text-white" href="{% url 'home' %}">Meetups</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5 class="text-white"><u>Resources</u></h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text-white" href="https://github.com/EdmontonPy/edmontonpy">GitHub</a></li>
+              <li><a class="text-white" href="https://edmontonpy.slack.com/">Slack</a></li>
+              <li><a class="text-white" href="https://twitter.com/edmontonpy">Twitter</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <h5 class="text-white"><u>About</u></h5>
+            <ul class="list-unstyled text-small">
+              <li><a class="text-white" href="{% url 'code-of-conduct' %}">Code of Conduct</a></li>
+              <li><a class="text-white" href="{% url 'privacy-policy' %}">Privacy Policy</a></li>
+              <li><a class="text-white" href="{% url 'terms-and-conditions' %}">Terms & Conditions</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- ================================================== -->
+    <!-- Bootstrap core JavaScript -->
+    <script defer src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+    <!-- FontAwesome JavaScript -->
+    <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js" integrity="sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1" crossorigin="anonymous"></script>
+
+    {% block extra_scripts %}
+    {% endblock %}
+
+    {% endblock %}
+  </body>
+</html>

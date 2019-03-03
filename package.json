@@ -1,0 +1,32 @@
+{
+  "name": "edmontonpy",
+  "version": "0.0.1",
+  "description": "CSS for EdmontonPy",
+  "author": "Andrew Crouse <amcrouse@data-get.org>",
+  "readmeFilename": "README.rst",
+  "scripts": {
+    "css": "npm-run-all css-compile css-minify",
+    "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 scss/style.scss dist/css/style.css",
+    "css-lint-main": "stylelint --syntax scss \"scss/*.scss\"",
+    "css-minify": "cleancss --level 1 --format breaksWith=lf --source-map --source-map-inline-sources --output dist/css/style.min.css dist/css/style.css",
+    "dist": "npm-run-all --parallel css",
+    "lint": "npm-run-all css-lint-main",
+    "test": "npm-run-all lint dist"
+  },
+  "devDependencies": {
+    "bootstrap": "^4.2.1",
+    "clean-css-cli": "^4.2.1",
+    "node-sass": "^4.11.0",
+    "npm-run-all": "^4.1.5",
+    "stylelint": "^9.9.0",
+    "stylelint-config-recommended-scss": "^3.2.0",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-order": "^2.0.0",
+    "stylelint-scss": "^3.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/EdmontonPy/edmontonpy.git"
+  },
+  "private": true
+}

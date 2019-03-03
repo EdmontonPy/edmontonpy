@@ -1,0 +1,5 @@
+include .coveragerc
+include AUTHORS
+include MANIFEST.in
+include README.rst
+include setup.cfg

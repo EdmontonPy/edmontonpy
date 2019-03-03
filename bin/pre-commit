@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+#
+# An example hook script to verify what is about to be committed.
+# Called by "git commit" with no arguments.  The hook should
+# exit with non-zero status after issuing an appropriate message if
+# it wants to stop the commit.
+#
+# To enable this hook run the following command
+# cd .git/hooks && ln -s ../../bin/pre-commit . && cd -
+#
+set -e
+shopt -s expand_aliases
+
+if [ -L "$0" ]; then
+	if readlink "$0" | grep -sqE '^\.\.*/'; then
+		DIR=$( dirname "$0" )/$( dirname $( readlink "$0" ) )
+	else
+		DIR=$( dirname $( readlink "$0" ) )
+	fi
+else
+	DIR=bin
+fi
+
+if [ ! -e "$DIR/run_tests" ]; then
+	echo "Unable to determine DIR"
+	exit 1
+fi
+
+cd "$DIR/.."
+exec ./bin/run_tests
+
+if [[ $? != 0 ]; then
+	echo "Tests failed, please fix and try again."
+	exit 1
+fi
+
+exit 0

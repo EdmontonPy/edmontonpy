@@ -1,0 +1,19 @@
+@each $color, $value in $theme-colors {
+  .triangle-bottom-#{$color}::before {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-left: (-$triangle-size);
+    pointer-events: none;
+    content: " ";
+    border: solid transparent;
+    border-width: $triangle-size;
+    border-top-color: $value;
+  }
+
+  .triangle-bottom-#{$color} {
+    position: relative;
+  }
+}

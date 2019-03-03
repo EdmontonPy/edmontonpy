@@ -1,0 +1,10 @@
+[run]
+source=./
+omit =
+	/*/tests/*
+	edmontonpy/*/migrations/*.py
+	edmontonpy/settings/*.py
+	edmontonpy/test_runners.py
+	edmontonpy/wsgi.py
+	manage.py
+	setup.py
