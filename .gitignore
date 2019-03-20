@@ -1,6 +1,5 @@
 # Django files
 edmontonpy/*.sqlite3
-edmontonpy/settings/local_settings.py
 
 # Byte-compiled / optimized / DLL files
 *.py[cod]
