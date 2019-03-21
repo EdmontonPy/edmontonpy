@@ -6,6 +6,7 @@ edmontonpy/settings/local_settings.py
 *.py[cod]
 __pycache__/
 dist/
+.mypy_cache
 
 # Distribution / packaging
 *.egg-info/
@@ -15,3 +16,23 @@ node_modules
 # Unit test / coverage reports
 .coverage
 htmlcov/
+
+# Temporary files
+*.swp
+*.swo
+*.tmp
+*~
+*.todo
+
+# OS generated files
+.DS_Store*
+thumbs.db
+Thumbs.db
+Desktop.ini
+
+# Editor files
+.vimcache
+.vscode
+*.sublime-workspace
+*.sublime-project
+.idea
