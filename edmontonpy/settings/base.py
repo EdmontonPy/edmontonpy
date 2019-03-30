@@ -14,7 +14,6 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
@@ -84,6 +83,12 @@ DATABASES = {
     }
 }
 
+
+# Fixtures (for local development)
+# https://docs.djangoproject.com/en/2.1/ref/settings/#std:setting-FIXTURE_DIRS
+FIXTURE_DIRS = [
+   os.path.join(BASE_DIR, 'fixture_data'),
+]
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
