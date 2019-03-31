@@ -16,6 +16,9 @@ EdmontonPy-Ops. To install use pipenv.
 
 Get started using EdmontonPy with the ``manage.py`` command.
 
+Note: To be able to access your server locally please change
+`DEBUG = False` to `DEBUG = True` in your `edmontonpy/settings/base.py` file.
+
 Contributing
 ============
 
