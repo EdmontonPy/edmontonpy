@@ -16,6 +16,12 @@ EdmontonPy-Ops. To install use pipenv.
 
 Get started using EdmontonPy with the ``manage.py`` command.
 
+**Getting a local database configured**
+    1. Create your local database
+       ``manage.py migrate``
+    2. Load data into your database
+       ``manage.py loaddata initial_data``
+
 Contributing
 ============
 
