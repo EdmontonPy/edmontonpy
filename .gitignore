@@ -36,3 +36,4 @@ Desktop.ini
 *.sublime-workspace
 *.sublime-project
 .idea
+.vs/
