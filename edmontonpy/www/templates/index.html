@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load tz %}
 
 {% load static %}
 
@@ -27,7 +28,7 @@
   <div class="container">
     <div class="row text-center">
       <div class="col">
-        <h1 class="text-white">Next Meetup: {% if object %}{{ object.date_time }}{% else %}To Be Announced{% endif %}</h1>
+        <h1 class="text-white">Next Meetup: {% if object %}{% timezone "America/Edmonton" %}{{ object.date_time }}{% endtimezone %}{% else %}To Be Announced{% endif %}</h1>
       </div>
     </div>
   </div>
