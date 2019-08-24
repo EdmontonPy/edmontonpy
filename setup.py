@@ -34,7 +34,7 @@ setup(
     ],
     install_requires=[
         'django>=2.2.4',
-        'psycopg2>=2.8.3',
+        'psycopg2-binary>=2.8.3',
     ],
     test_suite="edmontonpy.test_runners.test_suite",
     tests_require=tests_require,
