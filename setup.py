@@ -5,11 +5,11 @@ from os.path import dirname, join
 from setuptools import find_packages, setup
 
 tests_require = [
-    'coverage>=4.5.1, < 5.0',
-    'flake8>=3.5.0, < 4.0',
-    'pycodestyle>=2.3.1',
-    'pyflakes>=1.6.0',
-    'tblib>=1.3.2, < 2.0',
+    'coverage>=4.5.4, < 5.0',
+    'flake8>=3.7.8, < 4.0',
+    'pycodestyle>=2.5.0',
+    'pyflakes>=2.1.1',
+    'tblib>=1.4.0, < 2.0',
 ]
 
 setup(
@@ -33,8 +33,8 @@ setup(
         'manage.py',
     ],
     install_requires=[
-        'django>=2.1.2',
-        'psycopg2>=2.7.6.1',
+        'django>=2.2.4',
+        'psycopg2>=2.8.3',
     ],
     test_suite="edmontonpy.test_runners.test_suite",
     tests_require=tests_require,
