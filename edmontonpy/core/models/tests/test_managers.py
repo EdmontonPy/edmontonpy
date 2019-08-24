@@ -4,13 +4,15 @@ from datetime import datetime
 from unittest.mock import MagicMock, patch
 
 from django.utils import timezone
+from pytz import utc
 
 from edmontonpy.core.models.managers import MeetupManager
 
 
 class TestMeetupManager(unittest.TestCase):
     def setUp(self):
-        self.date_time = datetime(2018, 12, 29, 22, 30, 15, 400000)
+        # When USE_TZ is set, timezone.now is in UTC
+        self.date_time = datetime(2018, 12, 29, 22, 30, 15, 400000, tzinfo=utc)
         self.now_func = MagicMock(spec=timezone.now)
         self.now_func.return_value = self.date_time
         self.manager = MeetupManager(
