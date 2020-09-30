@@ -1,10 +1,10 @@
 ==========
-EdmontonPy
+EdmontonPy - an amaizing project
 ==========
 
 A website devoted to promoting Python in Edmonton.
 
-Getting Started
+Getting Started with the project
 ===============
 
 EdmontonPy is a standard Django website. Deployment is done using
