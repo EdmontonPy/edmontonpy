@@ -1,5 +1,5 @@
 ==========
-EdmontonPy
+EdmontonPy = Clean code
 ==========
 
 A website devoted to promoting Python in Edmonton.
