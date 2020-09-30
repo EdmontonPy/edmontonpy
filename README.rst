@@ -1,3 +1,4 @@
+Logr-an amazing project
 ==========
 EdmontonPy
 ==========
