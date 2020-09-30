@@ -1,5 +1,5 @@
 ==========
-EdmontonPy
+EDMONTOnPy
 ==========
 
 A website devoted to promoting Python in Edmonton.
