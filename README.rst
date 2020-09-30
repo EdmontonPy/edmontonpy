@@ -1,6 +1,6 @@
-==========
-EdmontonPy
-==========
+*==========*
+Edmonton Py
+*==========*
 
 A website devoted to promoting Python in Edmonton.
 
