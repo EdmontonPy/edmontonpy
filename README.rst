@@ -1,6 +1,9 @@
+
+AN VERY AMZING PROJECT
 ==========
 EdmontonPy
 ==========
+
 
 A website devoted to promoting Python in Edmonton.
 
