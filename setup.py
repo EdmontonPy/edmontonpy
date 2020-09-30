@@ -15,7 +15,7 @@ tests_require = [
 setup(
     name='edmontonpy',
     version='0.0.1',
-    description='Website for the Edmonton Python meetup',
+    description='Website is for the Edmonton Python meetup',
     long_description=open(join(dirname(__file__), 'README.rst')).read(),
     author='Andrew Crouse',
     author_email='amcrouse@data-get.org',
