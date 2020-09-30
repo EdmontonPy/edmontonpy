@@ -1,8 +1,8 @@
 ==========
-EdmontonPy
+EdmontonPy - Move To Python!!
 ==========
 
-A website devoted to promoting Python in Edmonton.
+A website devoted to promoting Python in Edmonton. Python is an interpreted, high-level and general-purpose programming language. Created by Guido van Rossum and first released in 1991, Python's design philosophy emphasizes code readability with its notable use of significant whitespace.
 
 Getting Started
 ===============
