@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import os
 import sys
-
+#nice project
 if __name__ == '__main__':
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'edmontonpy.settings')
     try:
