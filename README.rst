@@ -23,3 +23,4 @@ For guidance on setting up a development environment and how to make a
 contribution to EdmontonPy, see the `contributing guidelines`_.
 
 .. _contributing guidelines: https://github.com/EdmontonPy/edmontonpy/blob/master/CONTRIBUTING.rst
+--xx--xxx-xxxx---
