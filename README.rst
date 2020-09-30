@@ -2,7 +2,7 @@
 EdmontonPy
 ==========
 
-A website devoted to promoting Python in Edmonton.
+A website devoted to promot Python in Edmonton.
 
 Getting Started
 ===============
@@ -16,7 +16,7 @@ EdmontonPy-Ops. To install use pipenv.
 
 Get started using EdmontonPy with the ``manage.py`` command.
 
-Contributing
+Contribution
 ============
 
 For guidance on setting up a development environment and how to make a
