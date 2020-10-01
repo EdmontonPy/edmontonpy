@@ -1,8 +1,8 @@
 ==========
-EdmontonPy
+Our Purpose
 ==========
 
-A website devoted to promoting Python in Edmonton.
+A website is devoted to promoting Python(programming language) in Edmonton(City in Canada).
 
 Getting Started
 ===============
