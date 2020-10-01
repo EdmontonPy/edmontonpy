@@ -16,7 +16,9 @@ EdmontonPy-Ops. To install use pipenv.
 
 Get started using EdmontonPy with the ``manage.py`` command.
 
-Contributing
+Contributing in your website
+
+
 ============
 
 For guidance on setting up a development environment and how to make a
