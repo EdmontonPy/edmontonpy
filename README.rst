@@ -2,7 +2,7 @@
 EdmontonPy
 ==========
 
-A Small Important Step devoted to promoting Python in Edmonton.
+A Small Important Step devoted towards promoting Python in Edmonton.
 
 Getting Started
 ===============
