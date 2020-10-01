@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3 - GREAT!
 # -*- encoding: utf-8 -*-
 from os.path import dirname, join
 
