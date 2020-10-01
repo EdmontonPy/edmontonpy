@@ -1,6 +1,6 @@
-==========
-EdmontonPy
-==========
+===============================
+EdmontonPy - An Amazing Project
+===============================
 
 A website devoted to promoting Python in Edmonton.
 
@@ -8,7 +8,7 @@ Getting Started
 ===============
 
 EdmontonPy is a standard Django website. Deployment is done using
-EdmontonPy-Ops. To install use pipenv.
+EdmontonPy-Ops. To install EdmontonPy-Ops use pipenv.
 
 .. code-block:: text
 
@@ -16,8 +16,8 @@ EdmontonPy-Ops. To install use pipenv.
 
 Get started using EdmontonPy with the ``manage.py`` command.
 
-Contributing
-============
+To Contribute
+=============
 
 For guidance on setting up a development environment and how to make a
 contribution to EdmontonPy, see the `contributing guidelines`_.
