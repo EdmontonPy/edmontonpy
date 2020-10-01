@@ -8,7 +8,9 @@ Getting Started
 ===============
 
 EdmontonPy is a standard Django website. Deployment is done using
-EdmontonPy-Ops. To install use pipenv.
+EdmontonPy-Ops. 
+
+To install use pipenv.
 
 .. code-block:: text
 
