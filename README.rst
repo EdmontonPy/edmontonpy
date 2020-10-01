@@ -1,6 +1,6 @@
-==========
-EdmontonPy
-==========
+====================
+EdmontonPy - Amazing
+====================
 
 A website devoted to promoting Python in Edmonton.
 
