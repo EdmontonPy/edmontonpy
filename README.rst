@@ -16,6 +16,8 @@ EdmontonPy-Ops. To install use pipenv.
 
 Get started using EdmontonPy with the ``manage.py`` command.
 
+[Tutorial to install pipenv in Windows and iOs](https://www.youtube.com/watch?v=Avt9Sn4hJ00)
+
 Contributing
 ============
 
