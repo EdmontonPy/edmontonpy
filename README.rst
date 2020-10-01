@@ -2,6 +2,8 @@
 EdmontonPy
 ==========
 
+It is best way to learn Python.
+
 A website devoted to promoting Python in Edmonton.
 
 Getting Started
