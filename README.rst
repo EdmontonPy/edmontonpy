@@ -19,7 +19,7 @@ Get started using EdmontonPy with the ``manage.py`` command.
 Contributing
 ============
 
-For guidance on setting up a development environment and how to make a
-contribution to EdmontonPy, see the `contributing guidelines`_.
+For guidance on setting up a development environment and How to make a
+contribution to EdmontonPy, see the `contributing guidelines`_ below.
 
 .. _contributing guidelines: https://github.com/EdmontonPy/edmontonpy/blob/master/CONTRIBUTING.rst
