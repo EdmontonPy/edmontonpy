@@ -1,6 +1,6 @@
-============
-Contributing
-============
+=================================
+appriciation for the contribution
+=================================
 
 Thank you for considering contributing to EdmontonPy. It is people like you
 that make this community what it is. Following these guidelines helps to
