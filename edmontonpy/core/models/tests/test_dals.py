@@ -11,6 +11,7 @@ class TestMeetupDAL(DALTest):
     PROPERTY_MAP = (
         ('date_time', models.DateTimeField),
         ('sponsor', models.ForeignKey),
+        ('url', models.URLField),
     )
 
     def test_next_meetup(self):

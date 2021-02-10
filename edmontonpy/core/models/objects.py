@@ -2,6 +2,10 @@ from .dals import MeetupDAL, PresentationDAL, PresenterDAL, SponsorDAL
 
 
 class Meetup(MeetupDAL):
+    @property
+    def is_virtual(self):
+        return self.url != ''
+
     def __str__(self):
         return f'{self.date_time}'
 

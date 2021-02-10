@@ -7,6 +7,7 @@ from setuptools import find_packages, setup
 tests_require = [
     'coverage>=4.5.4, < 5.0',
     'flake8>=3.7.8, < 4.0',
+    'pep8-naming>=0.11.1, < 1.0',
     'pycodestyle>=2.5.0',
     'pyflakes>=2.1.1',
     'tblib>=1.4.0, < 2.0',
