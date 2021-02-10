@@ -80,26 +80,41 @@
   <div class="row d-flex justify-content-center p-4">
 
     <div class="col-12 shadow">
-      <div class="row p-3">
-        <div class="col-12 col-md-4 text-center text-light">
-          <h4 class="text-dark">Where we meet:</h4>
-          <address>
-            <strong><a href="https://www.startupedmonton.com/">Startup Edmonton</a></strong>
-            <a href="https://goo.gl/maps/4GMxptb4zb32">
-              <br>
-              10359 104 Sy N.W. #301,
-              <br>
-              Edmonton, AB T5J 1B9
-            </a>
-          </address>
-        </div>
-
-        <div class="col-12 col-md-8">
-          <div class="map embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2370.6658141068915!2d-113.50124168415402!3d53.54588098002133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53a022493dc36ccb%3A0x39a254126e46b1f1!2sStartup+Edmonton!5e0!3m2!1sen!2sca!4v1546050827861" frameborder="0" allowfullscreen></iframe>
+        {% if object.is_virtual %}
+          <div class="p-3 col text-center">
+            <h1>
+              Next meet up will be hosted virtually
+            </h1>
+            <h1>
+              <a href="{{ object.url }}">
+                <span class="btn btn-primary btn-lg">
+                  <i class="fas fa-users"></i> Join
+                </span>
+              </a>
+            </h1>
           </div>
-        </div>
-      </div>
+        {% else %}
+          <div class="row p-3">
+            <div class="col-12 col-md-4 text-center text-light">
+              <h4 class="text-dark">Where we meet:</h4>
+              <address>
+                <strong><a href="https://www.startupedmonton.com/">Startup Edmonton</a></strong>
+                <a href="https://goo.gl/maps/4GMxptb4zb32">
+                  <br>
+                  10359 104 Sy N.W. #301,
+                  <br>
+                  Edmonton, AB T5J 1B9
+                </a>
+              </address>
+            </div>
+
+            <div class="col-12 col-md-8">
+              <div class="map embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2370.6658141068915!2d-113.50124168415402!3d53.54588098002133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53a022493dc36ccb%3A0x39a254126e46b1f1!2sStartup+Edmonton!5e0!3m2!1sen!2sca!4v1546050827861" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        {% endif %}
     </div>
 
   </div>
