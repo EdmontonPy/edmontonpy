@@ -1,5 +1,8 @@
+import pytz
+
 from .dals import MeetupDAL, PresentationDAL, PresenterDAL, SponsorDAL
 
+America_Edmonton = pytz.timezone('America/Edmonton')
 
 class Meetup(MeetupDAL):
     @property
@@ -7,7 +10,7 @@ class Meetup(MeetupDAL):
         return self.url != ''
 
     def __str__(self):
-        return f'{self.date_time}'
+        return f'{self.date_time.astimezone(America_Edmonton)}'
 
 
 class Presentation(PresentationDAL):

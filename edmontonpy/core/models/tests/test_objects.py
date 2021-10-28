@@ -1,5 +1,7 @@
 from datetime import datetime
 
+import pytz
+
 from edmontonpy.core.models.dals import (
     MeetupDAL, PresentationDAL, PresenterDAL, SponsorDAL)
 from edmontonpy.core.models.objects import (
@@ -12,7 +14,8 @@ class TestMeetup(ModelTest):
     SUB_CLASSES = (MeetupDAL, )
 
     def setUp(self):
-        self.date_time = datetime(2018, 12, 29, 22, 30, 15, 400000)
+        self.date_time = datetime(2018, 12, 29, 22, 30, 15, 400000,
+                                  tzinfo=pytz.timezone('America/Edmonton'))
         self.model = self.MODEL_CLASS(
             date_time=self.date_time,
             url='',
